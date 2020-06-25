@@ -60,9 +60,9 @@ for F in dirSub_ROI:
             poly_shp_file = dir_ROI + F + '/' + f
             roi = gpd.read_file(poly_shp_file)
             init = False
-        # else:
-        #     poly_shp_file = dir_ROI + F + '/' + f
-        #     roi = roi.append(gpd.read_file(poly_shp_file), ignore_index=True)
+        else:
+            poly_shp_file = dir_ROI + F + '/' + f
+            roi = roi.append(gpd.read_file(poly_shp_file), ignore_index=True)
 
 df_farm = pd.DataFrame()
 
